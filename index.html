@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Accordion Slider Demo</title>
+<style>
+
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion ul li div a {
+  display: block;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.accordion ul li div a h2 {
+  font-family: Montserrat, sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+
+.accordion ul li:nth-child(1) { background-image: url("https://unsplash.it/650/250?image=680"); }
+
+.accordion ul li:nth-child(2) { background-image: url("https://unsplash.it/650/250?image=668"); }
+
+.accordion ul li:nth-child(3) { background-image: url("https://unsplash.it/650/250?image=659"); }
+
+.accordion ul li:nth-child(4) { background-image: url("https://unsplash.it/650/250?image=655"); }
+
+.accordion ul li:nth-child(5) { background-image: url("https://unsplash.it/650/250?image=657"); }
+
+.accordion ul li:nth-child(6) { background-image: url("https://unsplash.it/650/250?image=661"); }
+
+.accordion ul:hover li { width: 8%; }
+
+.accordion ul:hover li:hover { width: 60%; }
+
+.accordion ul:hover li:hover a { background: rgba(0, 0, 0, 0.4); }
+
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+ @media screen and (max-width: 600px) {
+
+body { margin: 0; }
+
+.accordion { height: auto; }
+
+.accordion ul li,
+.accordion ul li:hover,
+.accordion ul:hover li,
+.accordion ul:hover li:hover {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -webkit-transition: none;
+  transition: none;
+}
+}
+
+.about {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+
+.about a:hover { text-decoration: underline; }
+</style>
+</head>
+
+<body>
+<h1>Responsive Accordion Slider Demo</h1>
+<div class="accordion">
+  <ul>
+    <li>
+      <div> <a href="#">
+        <h2>Title 1</h2>
+        <p>Description 1</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 2</h2>
+        <p>Description 2</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 3</h2>
+        <p>Description 3</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 4</h2>
+        <p>Description 4</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 5</h2>
+        <p>Description 5</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 6</h2>
+        <p>Description 6</p>
+        </a> </div>
+    </li>
+  </ul>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
